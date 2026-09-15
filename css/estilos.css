@@ -186,3 +186,42 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+
+
+/* =========================
+   TABLAS
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+/* Encabezados de la tabla */
+th {
+    background-color: #243447;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #d5dbe0;
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 12px;
+    border: 1px solid #d5dbe0;
+    color: #333333;
+}
+
+/* Filas alternas */
+tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+/* Efecto al pasar el mouse */
+tr:hover {
+    background-color: #e8f0f7;
+}
