@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de contacto Hugo</title>
 </head>
+
 <body>
-  <header>
-    <h1>Nombre de la pagina</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="perfil.html">Perfil</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Contacto</h2>
-      <p>Formulario de contacto</p>
-    </section>
-  </main>
-  <footer>
-    <p>2026 Hugo</p>
-  </footer>
+    <header>
+        <h1>Nombre de la pagina</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+
+            <h2>Formulario de Contacto</h2>
+
+            <form action="#" method="post">
+                <label for="nombre">Nombre y apellido:</label><br>
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo"><br>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo"><br>
+                
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono"><br>
+                
+
+                <label for="asunto">Asunto:</label><br>
+                <input type="text" id="asunto" name="asunto"><br>
+                
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br>
+                
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>2026 Hugo</p>
+    </footer>
 </body>
+
 </html>
