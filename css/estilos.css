@@ -1,3 +1,188 @@
-/* Hoja de estilos del proyecto.
-   Se empieza a trabajar en la sesión 3.
-   Las reglas se escriben debajo de este comentario. */
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+header {
+    background-color: #243447;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+
+nav {
+    background-color: #1b2838;
+    padding: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: #64b5f6;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+main {
+    width: 650px;
+    margin: 40px auto;
+}
+
+section {
+    background-color: white;
+    padding: 35px 45px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+h2 {
+    color: #243447;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+form {
+    width: 100%;
+}
+
+label {
+    color: #37474f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #c5cbd1;
+    border-radius: 4px;
+    background-color: #fafafa;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    background-color: white;
+    border-color: #3f7cac;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+input[type="submit"],
+input[type="reset"] {
+    width: auto;
+    padding: 11px 25px;
+    margin-right: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Botón principal */
+
+input[type="submit"] {
+    background-color: #3f7cac;
+    color: white;
+    border: 1px solid #3f7cac;
+}
+
+input[type="submit"]:hover {
+    background-color: #32658d;
+}
+
+
+/* Botón secundario */
+
+input[type="reset"] {
+    background-color: white;
+    color: #555555;
+    border: 1px solid #b8b8b8;
+}
+
+input[type="reset"]:hover {
+    background-color: #eeeeee;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+footer {
+    background-color: #243447;
+    color: #dddddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
