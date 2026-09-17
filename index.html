@@ -6,29 +6,89 @@
 
   <!-- Cambie el título: es el texto de la pestaña del navegador
        y el que aparece en los resultados de búsqueda. -->
-  <title>Pagina Hugo</title>
+  <title>Pagina de David</title>
   <meta name="description" content="Resumen del sitio en una sola línea.">
 
   <!-- La hoja de estilos se trabaja a partir de la sesión 3. -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Nombre de la pagina</h1>
+  <div class="pagina">
+  <header class="encabezado">
+  <div class="contenedor encabezado-contenido">
+    <div class="marca">
+      <h1>David Castillo</h1>
+      <p>Ingeniera Industrial</p>
+    </div>
+
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="contacto.html">Contacto</a>
       <a href="perfil.html">Perfil</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
-  </header>
+  </div>
+</header>
   <main>
-    <section>
-      <h2>Servicios</h2>
-      <p>Texto real del sitio</p>
-    </section>
-  </main>
-  <footer>
-    <p>2026 Hugo</p>
-  </footer>
+  <section class="inicio">
+
+    <div class="presentacion">
+      <p class="saludo">Hola, soy</p>
+
+      <h2>David Castillo</h2>
+
+      <h3>Ingeniero Industrial</h3>
+
+      <p class="descripcion">
+        Profesional enfocado en la mejora de procesos, gestión de proyectos
+        y optimización de recursos. Mi objetivo es contribuir al desarrollo
+        de soluciones eficientes que generen resultados para las organizaciones.
+      </p>
+
+      <div class="botones-inicio">
+        <a href="perfil.html" class="boton-principal">Conoce mi perfil</a>
+        <a href="contacto.html" class="boton-secundario">Contactar</a>
+      </div>
+    </div>
+
+    <div class="areas">
+      <h3>Áreas profesionales</h3>
+
+      <div class="areas-contenido">
+
+        <div class="area">
+          <h4>Gestión de procesos</h4>
+          <p>
+            Análisis y mejora de procesos para optimizar recursos
+            y aumentar la eficiencia.
+          </p>
+        </div>
+
+        <div class="area">
+          <h4>Gestión de proyectos</h4>
+          <p>
+            Planificación y seguimiento de proyectos orientados
+            al cumplimiento de objetivos.
+          </p>
+        </div>
+
+        <div class="area">
+          <h4>Análisis de datos</h4>
+          <p>
+            Uso de información para apoyar la toma de decisiones
+            y detectar oportunidades de mejora.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+</main>
+  <footer class="pie-pagina">
+  <div class="contenedor">
+    <p>&copy; 2026 David Castillo · Perfil Profesional</p>
+  </div>
+</footer>
+</div>
 </body>
 </html>

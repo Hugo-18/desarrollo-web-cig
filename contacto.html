@@ -5,53 +5,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de contacto Hugo</title>
+    <title>Pagina de contacto David</title>
      <!-- La hoja de estilos se trabaja a partir de la sesión 3. -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header>
-        <h1>Nombre de la pagina</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="perfil.html">Perfil</a>
-        </nav>
-    </header>
-    <main>
-        <section>
+  <div class="pagina">
 
-            <h2>Formulario de Contacto</h2>
+   <header class="encabezado">
+  <div class="contenedor encabezado-contenido">
+    <div class="marca">
+      <h1>David Castillo</h1>
+      <p>Ingeniera Industrial</p>
+    </div>
 
-            <form action="#" method="post">
-                <label for="nombre">Nombre y apellido:</label><br>
-                <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo"><br><br>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+   <main>
+  <section class="contacto">
+    <div class="titulo-seccion">
+      <h2>Contacto</h2>
+      <p>
+        Si deseas comunicarte conmigo, completa el siguiente formulario
+        y me pondré en contacto contigo.
+      </p>
+    </div>
 
-                <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo"><br><br>
-                
+    <form class="formulario-contacto">
+      
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          placeholder="Escribe tu nombre"
+          required>
+      </div>
 
-                <label for="telefono">Teléfono:</label><br>
-                <input type="tel" id="telefono" name="telefono"><br><br>
-                
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input 
+          type="email" 
+          id="correo" 
+          name="correo" 
+          placeholder="ejemplo@correo.com"
+          required>
+      </div>
 
-                <label for="asunto">Asunto:</label><br>
-                <input type="text" id="asunto" name="asunto"><br><br>
-                
+      <div class="campo">
+        <label for="asunto">Asunto</label>
+        <input 
+          type="text" 
+          id="asunto" 
+          name="asunto" 
+          placeholder="Motivo de contacto"
+          required>
+      </div>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>
-                
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea 
+          id="mensaje" 
+          name="mensaje" 
+          rows="6" 
+          placeholder="Escribe tu mensaje"
+          required></textarea>
+      </div>
 
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>2026 Hugo</p>
-    </footer>
+      <button type="submit">Enviar mensaje</button>
+
+    </form>
+  </section>
+</main>
+  <footer class="pie-pagina">
+  <div class="contenedor">
+    <p>&copy; 2026 David Castillo · Perfil Profesional</p>
+  </div>
+</footer>
+  </div>
 </body>
 
 </html>
