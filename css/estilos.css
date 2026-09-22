@@ -1,27 +1,73 @@
+/* ==================================================
+   VARIABLES GENERALES
+   ================================================== */
+
+:root {
+  /* Colores principales */
+  --color-primario: #101755;
+  --color-primario-hover: #202a75;
+
+  --color-secundario: #0f766e;
+  --color-secundario-oscuro: #134e4a;
+
+  /* Fondos */
+  --color-fondo: #e8eeec;
+  --color-superficie: #ffffff;
+  --color-superficie-suave: #f8faf9;
+  --color-resaltado: #e1f1ee;
+
+  /* Texto */
+  --color-texto: #263332;
+  --color-texto-secundario: #64748b;
+  --color-texto-suave: #4b5563;
+  --color-texto-claro: #ffffff;
+
+  /* Bordes */
+  --color-borde: #dce5e2;
+  --color-borde-input: #cbd5e1;
+
+  /* Tipografía */
+  --fuente-principal: "Roboto", sans-serif;
+
+  /* Bordes redondeados */
+  --radio-pequeno: 5px;
+  --radio-normal: 8px;
+}
+
+
+/* ==================================================
+   ESTILOS GENERALES
+   ================================================== */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  /*padding: 40px 20px;*/
-  font-family: Arial, sans-serif;
-  background-color: #e8eeec;
-  color: #263332;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
 }
 
-/* Página */
+
+/* ==================================================
+   PÁGINA
+   ================================================== */
 
 .pagina {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--color-superficie);
 }
 
-/* Header */
+
+/* ==================================================
+   HEADER
+   ================================================== */
 
 .encabezado {
-  background-color: #101755;
+  background-color: var(--color-primario);
   padding: 25px 40px;
 }
 
@@ -33,17 +79,20 @@ body {
 
 .marca h1 {
   margin: 0;
-  color: white;
+  color: var(--color-texto-claro);
   font-size: 24px;
 }
 
 .marca p {
   margin: 5px 0 0;
-  color: #ccfbf1;
+  color: var(--color-resaltado);
   font-size: 14px;
 }
 
-/* Navegación */
+
+/* ==================================================
+   NAVEGACIÓN
+   ================================================== */
 
 nav {
   display: flex;
@@ -51,7 +100,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--color-texto-claro);
   text-decoration: none;
 }
 
@@ -59,33 +108,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Contenido */
+
+/* ==================================================
+   CONTENIDO PRINCIPAL
+   ================================================== */
 
 main {
   padding: 40px;
   min-height: 450px;
 }
 
-/* Footer */
 
-.pie-pagina {
-  background-color: #101755;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.pie-pagina p {
-  margin: 0;
-  font-size: 14px;
-}
-
-/* INICIO */
+/* ==================================================
+   INICIO
+   ================================================== */
 
 .inicio {
   max-width: 800px;
   margin: 0 auto;
 }
+
 
 /* Presentación */
 
@@ -95,30 +137,33 @@ main {
 
 .saludo {
   margin: 0 0 5px;
-  color: #0f766e;
+  color: var(--color-secundario);
   font-weight: bold;
 }
 
 .presentacion h2 {
   margin: 0;
   font-size: 38px;
-  color: #101755;
+  color: var(--color-primario);
 }
 
 .presentacion h3 {
   margin: 8px 0 20px;
   font-size: 20px;
-  color: #64748b;
+  color: var(--color-texto-secundario);
   font-weight: normal;
 }
 
 .descripcion {
   max-width: 650px;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--color-texto-suave);
 }
 
-/* Botones */
+
+/* ==================================================
+   BOTONES DE INICIO
+   ================================================== */
 
 .botones-inicio {
   display: flex;
@@ -129,38 +174,41 @@ main {
 .boton-principal,
 .boton-secundario {
   padding: 11px 18px;
-  border-radius: 5px;
+  border-radius: var(--radio-pequeno);
   text-decoration: none;
   font-size: 15px;
 }
 
 .boton-principal {
-  background-color: #101755;
-  color: white;
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
 }
 
 .boton-principal:hover {
-  background-color: #202a75;
+  background-color: var(--color-primario-hover);
 }
 
 .boton-secundario {
-  color: #101755;
-  border: 1px solid #101755;
+  color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 
 .boton-secundario:hover {
-  background-color: #f1f2f8;
+  background-color: var(--color-superficie-suave);
 }
 
-/* Áreas profesionales */
+
+/* ==================================================
+   ÁREAS PROFESIONALES
+   ================================================== */
 
 .areas {
-  border-top: 1px solid #dce5e2;
+  border-top: 1px solid var(--color-borde);
   padding-top: 30px;
 }
 
 .areas > h3 {
-  color: #134e4a;
+  color: var(--color-secundario-oscuro);
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -173,53 +221,56 @@ main {
 .area {
   width: 33.33%;
   padding: 20px;
-  background-color: #f8faf9;
-  border: 1px solid #dce5e2;
-  border-radius: 8px;
+  background-color: var(--color-superficie-suave);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-normal);
 }
 
 .area h4 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #101755;
+  color: var(--color-primario);
 }
 
 .area p {
   margin-bottom: 0;
-  color: #64748b;
+  color: var(--color-texto-secundario);
   font-size: 14px;
   line-height: 1.6;
 }
 
 
-
-/* PERFIL */
+/* ==================================================
+   PERFIL
+   ================================================== */
 
 .perfil {
   max-width: 800px;
   margin: 0 auto;
 }
 
+
 /* Sobre mí */
 
 .sobre-mi {
   margin-bottom: 25px;
   padding: 25px;
-  background-color: #f8faf9;
-  border-left: 4px solid #0f766e;
-  border-radius: 5px;
+  background-color: var(--color-superficie-suave);
+  border-left: 4px solid var(--color-secundario);
+  border-radius: var(--radio-pequeno);
 }
 
 .sobre-mi h3 {
   margin-top: 0;
-  color: #134e4a;
+  color: var(--color-secundario-oscuro);
 }
 
 .sobre-mi p {
   margin-bottom: 0;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--color-texto-suave);
 }
+
 
 /* Formación y experiencia */
 
@@ -232,13 +283,13 @@ main {
 .tarjeta {
   width: 50%;
   padding: 25px;
-  border: 1px solid #dce5e2;
-  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-normal);
 }
 
 .tarjeta h3 {
   margin-top: 0;
-  color: #134e4a;
+  color: var(--color-secundario-oscuro);
 }
 
 .tarjeta h4 {
@@ -247,25 +298,29 @@ main {
 
 .tarjeta p {
   margin: 0 0 5px;
-  color: #64748b;
+  color: var(--color-texto-secundario);
 }
 
 .tarjeta span {
   font-size: 14px;
-  color: #0f766e;
+  color: var(--color-secundario);
 }
 
-/* Habilidades */
+
+/* ==================================================
+   HABILIDADES
+   ================================================== */
 
 .habilidades {
+  margin-top: 20px;
   padding: 25px;
-  background-color: #f8faf9;
-  border-radius: 8px;
+  background-color: var(--color-superficie-suave);
+  border-radius: var(--radio-normal);
 }
 
 .habilidades h3 {
   margin-top: 0;
-  color: #134e4a;
+  color: var(--color-secundario-oscuro);
 }
 
 .lista-habilidades {
@@ -276,13 +331,16 @@ main {
 
 .lista-habilidades span {
   padding: 8px 12px;
-  background-color: #e1f1ee;
-  color: #134e4a;
-  border-radius: 5px;
+  background-color: var(--color-resaltado);
+  color: var(--color-secundario-oscuro);
+  border-radius: var(--radio-pequeno);
   font-size: 14px;
 }
 
-/* CONTACTO */
+
+/* ==================================================
+   CONTACTO
+   ================================================== */
 
 .contacto {
   max-width: 650px;
@@ -296,22 +354,25 @@ main {
 .titulo-seccion h2 {
   margin-bottom: 10px;
   font-size: 28px;
-  color: #134e4a;
+  color: var(--color-secundario-oscuro);
 }
 
 .titulo-seccion p {
   margin: 0;
-  color: #64748b;
+  color: var(--color-texto-secundario);
   line-height: 1.6;
 }
 
-/* Formulario */
+
+/* ==================================================
+   FORMULARIO
+   ================================================== */
 
 .formulario-contacto {
-  background-color: #f8faf9;
+  background-color: var(--color-superficie-suave);
   padding: 30px;
-  border: 1px solid #dce5e2;
-  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-normal);
 }
 
 .campo {
@@ -322,54 +383,70 @@ main {
   display: block;
   margin-bottom: 7px;
   font-weight: bold;
-  color: #374151;
+  color: var(--color-texto);
 }
 
 .campo input,
 .campo textarea {
   width: 100%;
   padding: 12px;
-  font-family: Arial, sans-serif;
+  font-family: inherit;
   font-size: 15px;
-  border: 1px solid #cbd5e1;
-  border-radius: 5px;
+  border: 1px solid var(--color-borde-input);
+  border-radius: var(--radio-pequeno);
 }
 
 .campo input:focus,
 .campo textarea:focus {
   outline: none;
-  border-color: #0f766e;
+  border-color: var(--color-secundario);
 }
 
 .campo textarea {
   resize: vertical;
 }
 
-/* Botón */
+
+/* Botón del formulario */
 
 .formulario-contacto button {
-  background-color: #0f766e;
-  color: white;
+  background-color: var(--color-secundario);
+  color: var(--color-texto-claro);
   border: none;
   padding: 12px 22px;
+  font-family: inherit;
   font-size: 15px;
-  border-radius: 5px;
+  border-radius: var(--radio-pequeno);
   cursor: pointer;
 }
 
 .formulario-contacto button:hover {
-  background-color: #134e4a;
+  background-color: var(--color-secundario-oscuro);
 }
 
-/* RESPONSIVE - TABLETS Y CELULARES */
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.pie-pagina {
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+  text-align: center;
+  padding: 20px;
+}
+
+.pie-pagina p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   RESPONSIVE - TABLETS Y CELULARES
+   ================================================== */
 
 @media (max-width: 768px) {
-
-  /* Página */
-
-  body {
-    padding: 20px 10px;
-  }
 
   /* Header */
 
@@ -388,11 +465,32 @@ main {
     gap: 15px;
   }
 
+
   /* Contenido */
 
   main {
     padding: 25px 20px;
   }
+
+
+  /* Inicio */
+
+  .presentacion h2 {
+    font-size: 32px;
+  }
+
+  .botones-inicio {
+    flex-wrap: wrap;
+  }
+
+  .areas-contenido {
+    flex-direction: column;
+  }
+
+  .area {
+    width: 100%;
+  }
+
 
   /* Perfil */
 
@@ -404,15 +502,84 @@ main {
     width: 100%;
   }
 
+
   /* Formulario */
 
   .formulario-contacto {
     padding: 20px;
   }
 
+
   /* Footer */
 
   .pie-pagina {
     padding: 20px 15px;
   }
+}
+
+/* ==================================================
+   PROYECTOS
+   ================================================== */
+
+.proyectos {
+  margin-top: 25px;
+}
+
+.proyectos > h2 {
+  color: var(--color-secundario-oscuro);
+  margin-bottom: 20px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.proyecto {
+  padding: 20px;
+  background-color: var(--color-superficie-suave);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-normal);
+}
+
+.proyecto h3 {
+  margin-top: 0;
+  color: var(--color-primario);
+}
+
+.proyecto p {
+  margin-bottom: 0;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+}
+
+/*
+Agregar al final de estilos.csss
+*/
+
+.oculto {
+   display: none;
+}
+
+/* Botón ver más proyectos */
+
+#ver-mas {
+  margin-top: 20px;
+  padding: 11px 18px;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+
+  border: none;
+  border-radius: var(--radio-pequeno);
+
+  cursor: pointer;
+}
+
+#ver-mas:hover {
+  background-color: var(--color-primario-hover);
 }
