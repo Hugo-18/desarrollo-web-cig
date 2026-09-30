@@ -139,37 +139,29 @@ if (formulario) {
 
 
         // Si todo es válido, enviar a FormSubmit
-     // Si todo es válido, enviar a FormSubmit
-if (valido) {
+        if (valido) {
 
-    const formData = new FormData();
-    formData.append("nombre", nombre.value);
-    formData.append("correo", correo.value);
-    formData.append("mensaje", mensaje.value);
-    formData.append("_captcha", "false");
-    // Opcional pero recomendado (ayuda a FormSubmit a identificar el origen)
-    formData.append("_url", window.location.href);
-
-    fetch("https://formsubmit.co/ajax/hugocifuentescifuentes@gmail.com", {
-        method: "POST",
-        body: formData
-        // NO pongas Content-Type: application/json
-        // El navegador lo pone automáticamente como multipart/form-data
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success === "true" || data.success === true) {
-            formulario.reset();
-            mostrarExito("Su mensaje fue enviado.");
-        } else {
-            mostrarExito("No se pudo enviar. Revisa la activación del formulario.");
-            console.log(data); // para ver el mensaje real de FormSubmit
+            fetch("https://formsubmit.co/ajax/hugocifuentescifuentes@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    nombre: nombre.value,
+                    correo: correo.value,
+                    mensaje: mensaje.value,
+                    _captcha: "false"
+                })
+            })
+            .then(function () {
+                formulario.reset();
+                mostrarExito("Su mensaje fue enviado.");
+            })
+            .catch(function () {
+                mostrarExito("No se pudo enviar.");
+            });
         }
-    })
-    .catch(function () {
-        mostrarExito("No se pudo enviar.");
-    });
-}
 
     });
 }
