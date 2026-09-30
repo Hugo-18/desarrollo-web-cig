@@ -503,12 +503,12 @@ main {
   }
 
 
-  /* Formulario */
+  /* Formulario 
 
   .formulario-contacto {
     padding: 20px;
   }
-
+*/
 
   /* Footer */
 
@@ -582,4 +582,81 @@ Agregar al final de estilos.csss
 
 #ver-mas:hover {
   background-color: var(--color-primario-hover);
+}
+
+/* CSS del formulario-contacto */
+
+
+.formulario-contacto {
+    background-color: var(--color-superficie-suave);
+    padding: 30px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-normal);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: var(--radio-pequeno);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 12px 22px;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: var(--radio-pequeno);
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--color-secundario-oscuro);
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+    min-height: 1.1rem;
+}
+
+.campo-invalido {
+    border: 2px solid red;
+}
+
+.exito {
+    color: var(--color-secundario);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.oculto {
+    display: none;
 }

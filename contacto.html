@@ -42,51 +42,31 @@
       </p>
     </div>
 
-    <form class="formulario-contacto">
-      
-      <div class="campo">
+    <form id="contacto" class="formulario-contacto" novalidate>
+
+    <div class="campo">
         <label for="nombre">Nombre</label>
-        <input 
-          type="text" 
-          id="nombre" 
-          name="nombre" 
-          placeholder="Escribe tu nombre"
-          required>
-      </div>
+        <input type="text" id="nombre" name="nombre">
+        <p class="error" id="error-nombre"></p>
+    </div>
 
-      <div class="campo">
-        <label for="correo">Correo electrónico</label>
-        <input 
-          type="email" 
-          id="correo" 
-          name="correo" 
-          placeholder="ejemplo@correo.com"
-          required>
-      </div>
+    <div class="campo">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo">
+        <p class="error" id="error-correo"></p>
+    </div>
 
-      <div class="campo">
-        <label for="asunto">Asunto</label>
-        <input 
-          type="text" 
-          id="asunto" 
-          name="asunto" 
-          placeholder="Motivo de contacto"
-          required>
-      </div>
-
-      <div class="campo">
+    <div class="campo">
         <label for="mensaje">Mensaje</label>
-        <textarea 
-          id="mensaje" 
-          name="mensaje" 
-          rows="6" 
-          placeholder="Escribe tu mensaje"
-          required></textarea>
-      </div>
+        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+        <p class="error" id="error-mensaje"></p>
+    </div>
 
-      <button type="submit">Enviar mensaje</button>
+    <button type="submit">Enviar</button>
 
-    </form>
+    <p id="mensaje-exito" class="exito oculto"></p>
+
+</form>
   </section>
 </main>
   <footer class="pie-pagina">
