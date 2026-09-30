@@ -141,6 +141,8 @@ if (formulario) {
         // Si todo es válido, enviar a FormSubmit
         if (valido) {
 
+            console.log("ENTRANDO AL FETCH DE FORMSUBMIT");
+
             fetch("https://formsubmit.co/ajax/hugocifuentescifuentes@gmail.com", {
                 method: "POST",
                 headers: {
@@ -154,13 +156,16 @@ if (formulario) {
                     _captcha: "false"
                 })
             })
-            .then(function () {
-                formulario.reset();
-                mostrarExito("Su mensaje fue enviado.");
-            })
-            .catch(function () {
-                mostrarExito("No se pudo enviar.");
-            });
+
+
+
+                .then(function () {
+                    formulario.reset();
+                    mostrarExito("Su mensaje fue enviado.");
+                })
+                .catch(function () {
+                    mostrarExito("No se pudo enviar.");
+                });
         }
 
     });
