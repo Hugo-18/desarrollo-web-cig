@@ -1,7 +1,8 @@
 // Archivo de JavaScript del proyecto.
-// Se empieza a trabajar en la sesión 4.
-// El código se escribe debajo de este comentario.
-//console.log("el script se esta ejecutando");
+
+// ==================================================
+// PROYECTOS
+// ==================================================
 
 const boton = document.getElementById("ver-mas");
 const extra = document.getElementById("proyectos-extra");
@@ -11,6 +12,11 @@ if (boton && extra) {
         extra.classList.toggle("oculto");
     });
 }
+
+
+// ==================================================
+// FORMULARIO DE CONTACTO
+// ==================================================
 
 const formulario = document.querySelector("#contacto");
 
@@ -27,6 +33,7 @@ if (formulario) {
     const exito = document.querySelector("#mensaje-exito");
 
 
+    // Marca un campo como inválido y muestra el error
     function marcar(campo, parrafo, texto) {
 
         parrafo.textContent = texto;
@@ -39,11 +46,19 @@ if (formulario) {
     }
 
 
+    // Muestra el mensaje final del formulario
+    function mostrarExito(texto) {
+        exito.textContent = texto;
+        exito.classList.remove("oculto");
+    }
+
+
+    // Evento al enviar el formulario
     formulario.addEventListener("submit", function (evento) {
 
         evento.preventDefault();
 
-        // Ocultar mensaje de éxito anterior
+        // Ocultar mensaje anterior
         exito.textContent = "";
         exito.classList.add("oculto");
 
@@ -90,9 +105,7 @@ if (formulario) {
 
             valido = false;
 
-        } else if (
-            correo.value.indexOf(".", posArroba) === -1
-        ) {
+        } else if (correo.value.indexOf(".", posArroba) === -1) {
 
             marcar(
                 correo,
@@ -125,16 +138,38 @@ if (formulario) {
         }
 
 
-        // SOLO si todo está correcto
-        if (valido) {
+        // Si todo es válido, enviar a FormSubmit
+     // Si todo es válido, enviar a FormSubmit
+if (valido) {
 
+    const formData = new FormData();
+    formData.append("nombre", nombre.value);
+    formData.append("correo", correo.value);
+    formData.append("mensaje", mensaje.value);
+    formData.append("_captcha", "false");
+    // Opcional pero recomendado (ayuda a FormSubmit a identificar el origen)
+    formData.append("_url", window.location.href);
+
+    fetch("https://formsubmit.co/ajax/hugocifuentescifuentes@gmail.com", {
+        method: "POST",
+        body: formData
+        // NO pongas Content-Type: application/json
+        // El navegador lo pone automáticamente como multipart/form-data
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success === "true" || data.success === true) {
             formulario.reset();
-
-            exito.textContent =
-                "Datos completos. Formulario enviado correctamente.";
-
-            exito.classList.remove("oculto");
+            mostrarExito("Su mensaje fue enviado.");
+        } else {
+            mostrarExito("No se pudo enviar. Revisa la activación del formulario.");
+            console.log(data); // para ver el mensaje real de FormSubmit
         }
+    })
+    .catch(function () {
+        mostrarExito("No se pudo enviar.");
+    });
+}
 
     });
 }
